@@ -5,6 +5,8 @@ public class EnemyHealth : MonoBehaviour
 {
     public int health = 3;
 
+    public AudioSource hitSound;
+
     private Animator animator;
     private NavMeshAgent agent;
     private bool isDead = false;
@@ -17,6 +19,11 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (hitSound != null)
+        {
+            hitSound.Play();
+        }
+
         if (isDead) return;
 
         health -= damage;

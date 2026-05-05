@@ -6,6 +6,8 @@ public class PlayerAttack : MonoBehaviour
     public int damage = 1;
     public float attackCooldown = 0.5f;
     public Animator swordAnimator;
+    public AudioSource swingSound;
+    public AudioSource hitSound;
 
     private float nextAttackTime = 0f;
 
@@ -13,6 +15,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime)
         {
+            swingSound.PlayOneShot(swingSound.clip);
+
             Attack();
             nextAttackTime = Time.time + attackCooldown;
         }
@@ -53,6 +57,10 @@ public class PlayerAttack : MonoBehaviour
         {
             closestEnemy.TakeDamage(damage);
             Debug.Log("Enemy damaged: " + closestEnemy.name);
+            if (hitSound != null)
+            {
+                hitSound.PlayOneShot(hitSound.clip);
+            }
         }
         else
         {

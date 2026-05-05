@@ -19,9 +19,10 @@ public class TowerCapture : MonoBehaviour
     public GameObject gameOverText;
     public GameObject restartButton;
 
+    public AudioSource drumSound;
+
     void Start()
     {
-        Time.timeScale = 1f;
 
         if (gameOverText != null)
             gameOverText.SetActive(false);
@@ -34,6 +35,17 @@ public class TowerCapture : MonoBehaviour
 
     void Update()
     {
+        if (enemiesInside > 0)
+        {
+            if (drumSound != null && !drumSound.isPlaying)
+                drumSound.Play();
+        }
+        else
+        {
+            if (drumSound != null && drumSound.isPlaying)
+                drumSound.Stop();
+        }
+
         if (captured) return;
 
         if (enemiesInside > 0)
