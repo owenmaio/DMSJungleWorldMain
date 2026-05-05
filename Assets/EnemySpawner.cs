@@ -3,7 +3,10 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public Transform[] waypoints;
+
+    public Transform[] leftPath;
+    public Transform[] rightPath;
+
     public float spawnDelay = 2f;
     public float spawnRate = 5f;
 
@@ -16,11 +19,23 @@ public class EnemySpawner : MonoBehaviour
     {
         GameObject newEnemy = Instantiate(enemyPrefab, transform.position, transform.rotation);
 
+        if (newEnemy.GetComponent<EnemyHealth>() == null)
+        {
+            newEnemy.AddComponent<EnemyHealth>();
+        }
+
         WaypointAI ai = newEnemy.GetComponent<WaypointAI>();
 
         if (ai != null)
         {
-            ai.waypoints = waypoints;
+            if (Random.value < 0.5f)
+            {
+                ai.waypoints = leftPath;
+            }
+            else
+            {
+                ai.waypoints = rightPath;
+            }
         }
     }
 }

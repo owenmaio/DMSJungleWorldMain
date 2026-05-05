@@ -6,11 +6,13 @@ public class WaypointAI : MonoBehaviour
     public Transform[] waypoints;
 
     private NavMeshAgent agent;
+    private Animator animator;
     private int currentWaypoint = 0;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
 
         if (waypoints.Length > 0)
         {
@@ -33,6 +35,12 @@ public class WaypointAI : MonoBehaviour
             else
             {
                 agent.isStopped = true;
+                agent.ResetPath();
+
+                if (animator != null)
+                {
+                    animator.SetBool("IsMoving", false);
+                }
             }
         }
     }
