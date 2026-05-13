@@ -21,6 +21,9 @@ public class TowerCapture : MonoBehaviour
 
     public AudioSource drumSound;
 
+    public string captureTag = "Enemy";
+    public bool playerWinsOnCapture = false;
+
     void Start()
     {
 
@@ -59,24 +62,24 @@ public class TowerCapture : MonoBehaviour
                 captureProgress = captureNeeded;
                 UpdateUI();
 
-                Debug.Log("SHOWING GAME OVER UI");
-
                 if (gameOverText != null)
                 {
+                    TextMeshProUGUI message = gameOverText.GetComponent<TextMeshProUGUI>();
+
+                    if (message != null)
+                    {
+                        if (playerWinsOnCapture)
+                            message.text = "YOU WON";
+                        else
+                            message.text = "YOU LOST";
+                    }
+
                     gameOverText.SetActive(true);
-                }
-                else
-                {
-                    Debug.Log("GameOverText is NULL");
                 }
 
                 if (restartButton != null)
                 {
                     restartButton.SetActive(true);
-                }
-                else
-                {
-                    Debug.Log("RestartButton is NULL");
                 }
 
                 Cursor.lockState = CursorLockMode.None;
@@ -91,7 +94,7 @@ public class TowerCapture : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag(captureTag))
         {
             enemiesInside++;
         }
@@ -99,7 +102,7 @@ public class TowerCapture : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag(captureTag))
         {
             enemiesInside--;
             enemiesInside = Mathf.Max(enemiesInside, 0);
