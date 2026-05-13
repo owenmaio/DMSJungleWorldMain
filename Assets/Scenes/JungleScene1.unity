@@ -1664,7 +1664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerCapture
   towerName: Left Tower
   captureProgress: 0
-  captureSpeed: 1
+  captureSpeed: 2
   captureNeeded: 100
   captureText: {fileID: 1473791118}
   captureSlider: {fileID: 1869614856}
@@ -4465,6 +4465,135 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7102011325575273554, guid: 4e6fd06e6722ed54a88f5c39d34b5e61, type: 3}
   m_PrefabInstance: {fileID: 226126127}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &232319775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232319777}
+  - component: {fileID: 232319776}
+  m_Layer: 0
+  m_Name: RainAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &232319776
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232319775}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 8b08162044c9d814f9299666ac86c85c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &232319777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232319775}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 180.3636, y: 8.00219, z: 1848.5836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &234316198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9879,7 +10008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerCapture
   towerName: Right Tower
   captureProgress: 0
-  captureSpeed: 1
+  captureSpeed: 1.5
   captureNeeded: 100
   captureText: {fileID: 943646804}
   captureSlider: {fileID: 126493209}
@@ -12397,6 +12526,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6160097791324921511, guid: 63c7aae8622b3604eaf4271cac3ec0a0, type: 3}
   m_PrefabInstance: {fileID: 726812925}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &735075534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 735075535}
+  - component: {fileID: 735075536}
+  m_Layer: 0
+  m_Name: EnemySpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &735075535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735075534}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 83.24, y: 0.131, z: 82.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1453630338}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &735075536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735075534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3ed7c0cfecd8042b78f3bd4654ab60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
+  enemyPrefab: {fileID: 6811873254180331940, guid: 2aec0f8c5990c864ebe550e7f43a7056, type: 3}
+  leftPath:
+  - {fileID: 1794550032}
+  - {fileID: 661005701}
+  - {fileID: 1356369104}
+  - {fileID: 1169879061}
+  - {fileID: 1274074531}
+  - {fileID: 379337403}
+  - {fileID: 1991015280}
+  - {fileID: 83978401}
+  - {fileID: 1443980312}
+  - {fileID: 661186336}
+  - {fileID: 1832115619}
+  - {fileID: 628020641}
+  - {fileID: 1266114539}
+  - {fileID: 1818549934}
+  - {fileID: 165165479}
+  - {fileID: 1096152145}
+  - {fileID: 1043542244}
+  - {fileID: 1801574176}
+  - {fileID: 1934057565}
+  - {fileID: 437035696}
+  - {fileID: 892077438}
+  rightPath:
+  - {fileID: 1794550032}
+  - {fileID: 661005701}
+  - {fileID: 1356369104}
+  - {fileID: 1169879061}
+  - {fileID: 1274074531}
+  - {fileID: 379337403}
+  - {fileID: 1991015280}
+  - {fileID: 83978401}
+  - {fileID: 1443980312}
+  - {fileID: 661186336}
+  - {fileID: 1832115619}
+  - {fileID: 628020641}
+  - {fileID: 1266114539}
+  - {fileID: 1818549934}
+  - {fileID: 165165479}
+  - {fileID: 1096152145}
+  - {fileID: 1043542244}
+  - {fileID: 1801574176}
+  - {fileID: 1934057565}
+  - {fileID: 437035696}
+  - {fileID: 892077438}
+  spawnDelay: 20
+  spawnRate: 20
+  enemySpeed: 3
+  enemyAcceleration: 4
 --- !u!1 &736748907
 GameObject:
   m_ObjectHideFlags: 0
@@ -17974,7 +18196,7 @@ Transform:
   m_GameObject: {fileID: 791459546}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.67309695, z: -0, w: 0.7395542}
-  m_LocalPosition: {x: 405.73, y: 8.902, z: 1774.76}
+  m_LocalPosition: {x: 393.4, y: 8.902, z: 1679.3}
   m_LocalScale: {x: 0.67, y: 0.44, z: 0.63}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17996,9 +18218,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   controller: {fileID: 791459547}
-  speed: 12
+  speed: 8
   gravity: -19.62
-  jumpHeight: 3
+  jumpHeight: 2
   groundCheck: {fileID: 1053454083}
   groundDistance: 0.4
   groundMask:
@@ -18016,7 +18238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804d9474501c20243bd7d4c9600d408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseMovement
-  mouseSensitivity: 200
+  mouseSensitivity: 150
 --- !u!114 &791459551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18047,7 +18269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b88710fe9a3f34ebe5110ae61ec89f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  health: 100
+  health: 200
   healthText: {fileID: 1212797700}
   gameOverText: {fileID: 2088963335}
   restartButton: {fileID: 452507959}
@@ -21121,7 +21343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerCapture
   towerName: EnemyTowers
   captureProgress: 0
-  captureSpeed: 1
+  captureSpeed: 2
   captureNeeded: 100
   captureText: {fileID: 444167119}
   captureSlider: {fileID: 1742956577}
@@ -25740,7 +25962,7 @@ Transform:
   m_GameObject: {fileID: 1297365274}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -104.11, y: 0.131, z: 50.379}
+  m_LocalPosition: {x: -104.38, y: 0.131, z: 50.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25795,8 +26017,8 @@ MonoBehaviour:
   - {fileID: 1633068461}
   - {fileID: 138137324}
   - {fileID: 346144969}
-  spawnDelay: 2
-  spawnRate: 2
+  spawnDelay: 20
+  spawnRate: 20
   enemySpeed: 3
   enemyAcceleration: 4
 --- !u!1001 &1297904535
@@ -29236,9 +29458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1938a0a147bfbf4e81d80bf797cc0c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerCapture
-  towerName: Right Tower
+  towerName: EnemyTower
   captureProgress: 0
-  captureSpeed: 1
+  captureSpeed: 2
   captureNeeded: 100
   captureText: {fileID: 444167119}
   captureSlider: {fileID: 1742956577}
@@ -29715,6 +29937,7 @@ Transform:
   m_Children:
   - {fileID: 1079115627}
   - {fileID: 1297365275}
+  - {fileID: 735075535}
   - {fileID: 654833469}
   - {fileID: 251456466}
   - {fileID: 1681483482}
@@ -41083,3 +41306,4 @@ SceneRoots:
   - {fileID: 287307846}
   - {fileID: 1749616435}
   - {fileID: 402526681}
+  - {fileID: 232319777}
